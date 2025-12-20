@@ -137,7 +137,7 @@ function de() {
   const display = document.getElementById("pdisplay").remove();
 }
 
-function wD(w, event) {
+function dW(w, event) {
   const q = window.word;
   const m = q[w];
   const display = document.createElement("div");
