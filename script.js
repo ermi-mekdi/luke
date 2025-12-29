@@ -185,3 +185,25 @@ function dV(b) {
   //console.log("Paths:", b);
   //console.log("Verses:", verses);
 }
+function vers(t) {
+  const display = document.createElement("div");
+  display.classList.add("person");
+  display.id = "pdisplay";
+  document.body.appendChild(display);
+  const tq = t
+    ? t
+        .map(
+          (item) =>
+            `<li ><h3>${item.n}</h3>
+      <h4 class="vdetails">${item.d}</h4>
+     </li>`
+        )
+        .join("")
+    : "";
+
+  display.innerHTML = `
+    <div onclick="de()" class="x">X</div> 
+    ${tq}
+    <button class="xbtn" onclick="de()">Close</button>
+    `;
+}
